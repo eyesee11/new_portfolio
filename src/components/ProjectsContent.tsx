@@ -48,8 +48,7 @@ const projectsDetailed = [
       "TEKST is a powerful Java-based text editor with advanced features for an enhanced writing experience.",
     longDescription:
       "A powerful Java-based text editor with advanced features including multiple theme support, comprehensive keyboard shortcuts, syntax highlighting and pre-release versions available.",
-    image:
-      "/tekst.png",
+    image: "/tekst.png",
     tags: ["java", "swing", "flatlaf"],
     github: "https://github.com/eyesee11/TEKST",
     live: "https://eyesee11.github.io/TEKST/",
@@ -67,9 +66,8 @@ const projectsDetailed = [
       "MediSync is designed to streamline medical document access and management for patients and healthcare providers.",
     longDescription:
       "An innovative solution to fragmented medical documents of a patient. Effectiveness areas are referrals between doctors, accessing medical history. Built with modern web technologies.",
-    image:
-      "/MediSync.png",
-    tags: ["react", "typescript", "tailwindCSS","MongoDB", "Node.js"],
+    image: "/MediSync.png",
+    tags: ["react", "typescript", "tailwindCSS", "MongoDB", "Node.js"],
     github: "https://github.com/eyesee11/MediSync",
     live: "https://medi-sync-snowy.vercel.app/",
     features: [
@@ -183,8 +181,8 @@ export default function ProjectsContent() {
           negativeMargin="-1rem"
           isTilted={false}
           autoplay={true}
-          autoplaySpeed={0.8}
-          autoplayDirection="down"
+          autoplaySpeed={1.2}
+          autoplayDirection="up"
           pauseOnHover={true}
         />
       </div>
