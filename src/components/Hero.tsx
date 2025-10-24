@@ -53,7 +53,7 @@ export default function Hero() {
           width={180}
           height={90}
           priority
-          className="rounded-xl shadow-lg bg-transparent max-w-[60vw] h-auto md:max-w-[220px]"
+          className="rounded-xl bg-transparent max-w-[60vw] h-auto md:max-w-[220px]"
         />
       </div>
     </section>
