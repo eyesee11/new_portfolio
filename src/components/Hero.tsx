@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[80vh] flex items-center py-16 relative"
+      className="min-h-[100vh] flex items-center py-16 md:py-24 relative"
     >
       <div className="max-w-2xl">
         <motion.div
@@ -31,14 +31,14 @@ export default function Hero() {
           <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 mb-4 leading-relaxed">
             i'm a{" "}
             <span className="text-neutral-800 dark:text-neutral-200">
-              full-stack developer
+              Software developer
             </span>{" "}
-            that loves building products and web apps and hope to impact
+            that loves building products and Softwares and hope to impact
             millions of lives
           </p>
 
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            i'm a passionate developer building scalable web apps that are
+            i'm a passionate developer building scalable Software Applications that are
             performance optimized and good looking. currently pursuing my degree
             and working on exciting projects that solve real-world problems.
           </p>

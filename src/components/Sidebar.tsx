@@ -15,7 +15,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import MobileMenu from "./MobileMenu";
+
+import { Menu } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const navigation = [
@@ -57,13 +58,14 @@ interface SidebarProps {
   currentSection?: string;
 }
 
-export default function Sidebar({ currentSection = "home" }: SidebarProps) {
-  const [activeSection, setActiveSection] = useState(currentSection);
+export default function Sidebar({ currentSection }: SidebarProps) {
+  const [activeSection, setActiveSection] = useState(currentSection || "home");
+  const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   // Update active section when currentSection prop changes
   useEffect(() => {
-    setActiveSection(currentSection);
+    setActiveSection(currentSection || "home");
   }, [currentSection]);
 
   useEffect(() => {
@@ -100,13 +102,36 @@ export default function Sidebar({ currentSection = "home" }: SidebarProps) {
 
   return (
     <>
-      {/* Mobile Menu */}
-      <MobileMenu onNavigate={() => {}} />
+      {/* Hamburger Icon */}
+      <button
+        className="fixed top-6 left-6 z-[120] flex items-center justify-center w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 shadow-lg border border-neutral-200 dark:border-neutral-700 lg:hidden"
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Open sidebar"
+      >
+        <Menu className="w-7 h-7 text-neutral-700 dark:text-neutral-200" />
+      </button>
 
-      {/* Desktop Sidebar */}
-      <aside className="fixed left-0 top-0 h-screen w-80 bg-white dark:bg-neutral-800 border-r border-neutral-200 dark:border-neutral-700 overflow-y-auto hidden lg:flex flex-col z-[100] transition-colors duration-300">
+      {/* Floating Sidebar Widget */}
+      <aside
+        className={`fixed top-6 left-6 z-[110] w-72 max-w-[90vw] rounded-2xl shadow-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 transition-transform duration-300 overflow-hidden flex flex-col
+        ${
+          open ? "translate-x-0" : "-translate-x-[110%]"
+        } lg:translate-x-0 lg:top-10 lg:left-10 lg:w-80 lg:block lg:rounded-2xl lg:shadow-2xl lg:h-auto`}
+        style={{ minHeight: "auto", maxHeight: "90vh" }}
+      >
+        {/* Close button for mobile */}
+        <div className="flex lg:hidden justify-end p-3">
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close sidebar"
+            className="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+          >
+            <span className="text-2xl">&times;</span>
+          </button>
+        </div>
+
         {/* Profile Section */}
-        <div className="p-8 text-center">
+        <div className="p-8 pt-4 text-center">
           <div className="relative w-16 h-16 mx-auto mb-3">
             <Image
               src="/image.jpg"
@@ -120,7 +145,7 @@ export default function Sidebar({ currentSection = "home" }: SidebarProps) {
             Ayush Chauhan
           </h3>
           <p className="text-neutral-500 dark:text-neutral-400 text-xs">
-            Full Stack Developer and AI Enthusiast
+            Software Developer and AI Enthusiast
           </p>
         </div>
 
@@ -134,7 +159,10 @@ export default function Sidebar({ currentSection = "home" }: SidebarProps) {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    onClick={(e) => handleNavClick(item, e)}
+                    onClick={(e) => {
+                      handleNavClick(item, e);
+                      setOpen(false);
+                    }}
                     className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-all text-sm cursor-pointer relative ${
                       isActive
                         ? "bg-neutral-100 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100"

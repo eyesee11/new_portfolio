@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "about", "projects", "contact", "blog"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +70,7 @@ export default function Home() {
       <main className="flex-1 lg:ml-80 relative">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
           {/* Hero Section */}
-          <section id="home" className="min-h-screen flex items-center">
+          <section id="home" className="min-h-[40vh] flex items-start">
             <Hero />
           </section>
 
@@ -96,6 +96,45 @@ export default function Home() {
               contact
             </h2>
             <ContactContent />
+          </section>
+
+          {/* Blog Section */}
+          <section
+            id="blog"
+            className="min-h-[50vh] py-20 flex flex-col items-center justify-center"
+          >
+            <div className="w-full max-w-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg p-10 flex flex-col items-center text-center">
+              <svg
+                width="40"
+                height="40"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="mb-4 text-neutral-900 dark:text-neutral-100"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4l2-2 2 2h4a2 2 0 012 2v12a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h2 className="text-2xl sm:text-3xl font-normal mb-4 text-neutral-900 dark:text-neutral-100">
+                blog
+              </h2>
+              <p className="mb-6 text-lg font-light italic text-neutral-700 dark:text-neutral-300">
+                welcome to my blog! here, I share insights, tutorials, and
+                thoughts on various topics.
+              </p>
+              <a
+                href="https://eyesee11.github.io/Blog/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-lg shadow hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors text-lg font-semibold tracking-wide"
+              >
+                Visit My Blog
+              </a>
+            </div>
           </section>
         </div>
 
