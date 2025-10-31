@@ -29,7 +29,7 @@ export default function TimeGreeting() {
   if (!greeting) return null;
 
   return (
-    <div className="fixed top-6 right-6 z-[60] lg:right-8 lg:top-8">
+    <div className="fixed top-6 right-6 z-[80] lg:right-8 lg:top-8">
       <ShuffleText
         text={greeting}
         className="text-lg sm:text-xl lg:text-2xl font-normal text-neutral-600 dark:text-neutral-400"
