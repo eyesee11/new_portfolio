@@ -45,14 +45,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen relative z-[60]">
       <Sidebar currentSection={sections[activeSection]} />
 
       {/* Time-based greeting */}
       <TimeGreeting />
 
       {/* Section indicators */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-[60] hidden lg:flex flex-col gap-3">
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-[70] hidden lg:flex flex-col gap-3">
         {sections.map((section, index) => (
           <button
             key={section}
@@ -67,8 +67,8 @@ export default function Home() {
         ))}
       </div>
 
-      <main className="flex-1 lg:ml-80 relative">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
+      <main className="flex-1 lg:ml-80 relative z-[60]">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-12 relative z-[60]">
           {/* Hero Section */}
           <section id="home" className="min-h-[40vh] flex items-start">
             <Hero />
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
 
         {/* Gradual Blur Effects - Positioned fixed within main content area */}
-        <div className="fixed top-0 left-0 lg:left-80 right-0 h-32 pointer-events-none z-50">
+        <div className="fixed top-0 left-0 lg:left-80 right-0 h-32 pointer-events-none z-[65]">
           <GradualBlur
             target="parent"
             position="top"
@@ -151,7 +151,7 @@ export default function Home() {
             opacity={1}
           />
         </div>
-        <div className="fixed bottom-0 left-0 lg:left-80 right-0 h-32 pointer-events-none z-50">
+        <div className="fixed bottom-0 left-0 lg:left-80 right-0 h-32 pointer-events-none z-[65]">
           <GradualBlur
             target="parent"
             position="bottom"
