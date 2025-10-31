@@ -45,13 +45,13 @@ const navigation = [
 ];
 
 const socials = [
-  { name: "Twitter", href: "https://twitter.com/eyesee11", icon: Twitter },
+  { name: "Twitter", href: "https://twitter.com/eyesee_11", icon: Twitter },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/ayush-chauhan-776321293/",
     icon: Linkedin,
   },
-  { name: "GitHub", href: "https://github.com/eyesee_11", icon: Github },
+  { name: "GitHub", href: "https://github.com/eyesee11", icon: Github },
 ];
 
 interface SidebarProps {
