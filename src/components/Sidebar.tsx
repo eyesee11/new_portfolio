@@ -134,7 +134,7 @@ export default function Sidebar({ currentSection }: SidebarProps) {
         <div className="p-8 pt-4 text-center">
           <div className="relative w-16 h-16 mx-auto mb-3">
             <Image
-              src="/image.jpg"
+              src="/image.png"
               alt="Profile"
               width={64}
               height={64}

@@ -33,7 +33,7 @@ const projectsDetailed = [
     image: "/Aethermeet.png",
     tags: ["react", "node.js", "mongodb", "websockets"],
     github: "https://github.com/eyesee11/AetherMeet",
-    live: "#",
+    live: "https://aethermeet-web.onrender.com",
     features: [
       "Demo and authenticated user flows",
       "robust memory management",
@@ -79,6 +79,60 @@ const projectsDetailed = [
   },
   {
     id: 5,
+    title: "The Neo Shop - E-Commerce Platform",
+    description:
+      "Neo Shop is a modern e-commerce platform showcasing different types of rendering strategies.",
+    longDescription:
+      "Neo Shop is a cutting-edge e-commerce platform that provides users with a seamless shopping experience. It showcases various rendering strategies including Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR) to optimize performance and user experience.",
+    image: "/NeoShop.png",
+    tags: ["react", "typescript", "tailwindCSS", "MongoDB", "Node.js"],
+    github: "https://github.com/eyesee11/NeoShop",
+    live: "https://the-neo-shop.vercel.app/",
+    features: [
+      "SSG, SSR, and CSR rendering strategies",
+      "dynamic product listings",
+      "secure user authentication",
+      "integrated payment gateway",
+    ],
+  },
+  {
+    id: 6,
+    title: "Document RAG Service",
+    description:
+      "A FastAPI application providing a Retrieval Augmented Generation (RAG) service for intelligent document querying with LLM fallbacks.",
+    longDescription:
+      "This high-performance FastAPI API offers intelligent querying of PDF documents using a RAG pipeline, integrating multiple LLMs (Gemini, Together.ai) with robust caching and circuit breakers for reliability.",
+    image: "/rag.png",
+    tags: ["python", "fastapi", "uvicorn", "faiss","tiktoken","asyncio"],
+    github: "https://github.com/eyesee11/hackrxv3",
+    live: "#",
+    features: [
+      "RESTful API for document ingestion and question answering.",
+      "extracts text from PDFs for RAG pipeline.",
+      "intelligent answers via Gemini/Together.ai with fallbacks.",
+      "caching, circuit breakers, and optimized document processing.",
+    ],
+  },
+  // {
+  //   id: 7,
+  //   title: "MediSync",
+  //   description:
+  //     "MediSync is designed to streamline medical document access and management for patients and healthcare providers.",
+  //   longDescription:
+  //     "An innovative solution to fragmented medical documents of a patient. Effectiveness areas are referrals between doctors, accessing medical history. Built with modern web technologies.",
+  //   image: "/MediSync.png",
+  //   tags: ["react", "typescript", "tailwindCSS", "MongoDB", "Node.js"],
+  //   github: "https://github.com/eyesee11/MediSync",
+  //   live: "https://medi-sync-snowy.vercel.app/",
+  //   features: [
+  //     "secure document access using Blockchain",
+  //     "real-time document sharing",
+  //     "patient consent management",
+  //     "notifications for document updates",
+  //   ],
+  // },
+  {
+    id: 8,
     title: "Kwizz",
     description:
       "A simple basic quiz platform made from scratch using Spring Boot and React.",
