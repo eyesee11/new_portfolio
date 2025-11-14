@@ -113,24 +113,24 @@ const projectsDetailed = [
       "caching, circuit breakers, and optimized document processing.",
     ],
   },
-  // {
-  //   id: 7,
-  //   title: "MediSync",
-  //   description:
-  //     "MediSync is designed to streamline medical document access and management for patients and healthcare providers.",
-  //   longDescription:
-  //     "An innovative solution to fragmented medical documents of a patient. Effectiveness areas are referrals between doctors, accessing medical history. Built with modern web technologies.",
-  //   image: "/MediSync.png",
-  //   tags: ["react", "typescript", "tailwindCSS", "MongoDB", "Node.js"],
-  //   github: "https://github.com/eyesee11/MediSync",
-  //   live: "https://medi-sync-snowy.vercel.app/",
-  //   features: [
-  //     "secure document access using Blockchain",
-  //     "real-time document sharing",
-  //     "patient consent management",
-  //     "notifications for document updates",
-  //   ],
-  // },
+  {
+    id: 7,
+    title: "SwiftMail",
+    description:
+      "SwiftMail is a modern, privacy-first temporary email generator.",
+    longDescription:
+      "SwiftMail is a fully functional temporary email service built with React, TypeScript, and Vite. It allows users to generate disposable email addresses instantly and receive emails in real-time without any registration, focusing on privacy and ease of use.",
+    image: "/SwiftMail.png",
+    tags: ["react", "typescript", "tailwindCSS", "shadcn/UI", "Vite 6.3.5"],
+    github: "https://github.com/eyesee11/SwiftMail",
+    live: "https://assessment-submissions.web.app/",
+    features: [
+      "Instant email generation with no registration required.",
+      "Real-time email delivery and retrieval.",
+      "Secure and private email addresses.",
+      "QR code for easy email sharing.", 
+    ],
+  },
   {
     id: 8,
     title: "Kwizz",
